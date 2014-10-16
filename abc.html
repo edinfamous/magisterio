@@ -1,0 +1,509 @@
+<?php 
+	error_reporting(E_ERROR | E_PARSE);
+	
+	// require_once("includes/db_connect.php");
+	// require_once("includes/fpdf/fpdf.php");
+	// require_once("includes/pdf.aux.php");
+	// require_once("includes/numeros.php");
+	// require_once("includes/orders.php");
+	// require_once("includes/users.php");
+	// require_once("includes/address.php");
+	// require_once("includes/currency.php");
+	// require_once("includes/checkout.php");
+	// require_once("includes/books.php");
+	// require_once("includes/date.php");
+	// require_once("includes/cover_creation_pdf.php");
+	// require_once("imprenta/includes/author_rights.php");
+	
+	// ini_set('memory_limit', '256M');
+	
+	echo "<pre>";
+	
+	// exec('convert -density 72 /var/chroot/home/content/07/6728307/html/cover_creation/4_complete_cover_image/complete_cover_20130321-112619-000000001-41bb7e0980dc8438.pdf[0] -resample 300 -quality 100 /var/chroot/home/content/07/6728307/html/cover_creation/4_complete_cover_image/temp/complete_cover_20130321-112619-000000001-41bb7e0980dc8438.jpeg');
+	// exec('convert /var/chroot/home/content/07/6728307/html/abc.pdf[0] /var/chroot/home/content/07/6728307/html/abc.jpeg');
+	echo "fim";
+	echo "</pre>";
+	// createPdfNewPageSize ('aaa.pdf', 'aaa2.pdf', 140, 210, "center");
+	
+	/*************
+		PRINT ALL QUESTIONS AND ANSWERS
+	**************/
+	
+	// $last_section = '';
+	// $last_subsection = '';
+	// $first = true;
+	
+	// $result = mysql_query("SELECT * FROM faq WHERE question_version LIKE 'no' AND locale LIKE 'es' ORDER BY id");
+	
+	// if ($result) {	
+		// while ($row = mysql_fetch_object($result)) {
+			// $current_section = $row->section;
+			// $current_subsection = $row->subsection;
+			
+			// if ($current_section != $last_section) {
+				// echo "<h1>".$current_section."</h1>";
+			// }
+			
+			// if ($current_subsection != $last_subsection) {
+				// echo "<h2>".$current_subsection."</h2>";
+			// }
+			
+			// echo "<b>".$row->question."</b><br/>";
+			// echo "<p>".$row->answer."</p>";
+			
+			// $last_section = $row->section;
+			// $last_subsection = $row->subsection;
+		// }
+	// }
+	
+	// ####################################
+
+	
+	// $isbn_checker = new ISBN();
+	// $result = mysql_query("SELECT id, isbn FROM books WHERE isbn NOT LIKE ''");
+	// echo '<table border="1" padding="3">';
+	// if ($result) {	
+		// while ($row = mysql_fetch_object($result)) {
+		
+			// $book_isbn_hyphenated = $isbn_checker->hyphenate($row->isbn);
+			
+			// echo '<tr>';
+			// echo '	<td>'.$row->id.'</td>';
+			// echo '	<td>'.$row->isbn.'</td>';
+			// echo '	<td>'.$book_isbn_hyphenated.'</td>';
+			// echo '</tr>';
+		// }
+	// }
+	// echo '</table>';
+	
+	// $from = array('email' => 'servicioalcliente@autoreseditores.com', 'name' =>'Autores Editores');
+	// $to = array(array('email' => 'pedrotavaresjr@hotmail.com', 'name' => 'Pedro Tavares'),
+				// array('email' => 'pedrotavaresjr@gmail.com', 'name' => 'Pedrinho Tavares'));				
+	// $subject = 'Esperamos que sea el ultimo correo';
+	// $html_mail = 'Hola,<br/><br/>
+	// Prueba de caracteres ¿¡¬√ƒ≈‡·‚„‰Â“”‘’÷ÿÚÛÙıˆ¯»… ÀËÈÍÎ«ÁÃÕŒœÏÌÓÔŸ⁄€‹˘˙˚¸ˇ—Ò y de una <br>
+	// imagen <img src="http://www.autoreseditores.com/images/template/autores-editores.png">a verificar el nuevo precio y ordenar la 
+	// impresiÛn desde un ejemplar, puedes ingresar a <a href="http://www.autoreseditores.com/mis-libros.html">Mis libros</a> y 
+	// hacer clic en el botÛn <strong>comprar</strong><br/><br/>
+	// Estaremos atentos a cualquier inquietud o comentario.<br/><br/>
+	// Un saludo,<br/>
+	// Equipo de Autores Editores';
+	
+	// // $mandrill_result = sendMandrillMailJSON($from, $to, $subject, $html_mail, 'validacion_isbn, mensaje_prueba', true);
+	// print_r($mandrill_result);
+	// echo "<br>================<br>";
+	// echo $mandrill_result[0]['email']."<br><br>";
+	// echo $mandrill_result[0]['status']."<br><br>";
+	
+	
+	// exec("convert -density 600 /cover_creation/4_complete_cover_image/complete_cover_20130321-112619-000000001-41bb7e0980dc8438.pdf[0] -resample 300 -quality 100 /cover_creation/4_complete_cover_image/temp/complete_cover_20130321-112619-000000001-41bb7e0980dc8438.jpeg");
+	// error_reporting(E_ALL);
+	
+	// if (file_exists("book/pdf/20101026-155732-000000001-e9246b7f91c892bc.pdf")) {
+		// echo 'Hello 1 <br>';
+		// // echo exec('identify -format "%f  Page %s:   Width: %W -- Height: %H\n" book/pdf/20101026-155732-000000001-e9246b7f91c892bc.pdf', $output);
+		// $output = exec("pdfinfo book/pdf/20101026-155732-000000001-e9246b7f91c892bc.pdf");
+		// var_dump($output);
+	// }
+	
+	// echo 'Hello 2';
+	
+	/*********************************
+	*	ENVIAR MUESTRAS DE LIBROS PARA INCENTIVAR LA PRIMERA COMPRA
+	**********************************/
+	// require_once("includes/db_connect.php");
+	// require_once("includes/cover_creation_pdf.php");
+	// require_once("includes/books.php");
+	
+	// $book_id = 1308;
+	// $pass = getBookPass ($book_id);
+	// createCoverForBookID ($book_id);
+	// echo '<img src="/cover_creation/4_complete_cover_image/thumbs/complete_cover_'.$pass.'.jpeg?'.rand(0, 999999).'">';
+	// sleep(15);
+	
+	
+	// /*********************************
+	// *	ENVIAR MUESTRAS DE LIBROS PARA INCENTIVAR LA PRIMERA COMPRA
+	// **********************************/
+	// require_once("includes/db_connect.php");
+	// require_once("includes/cover_creation_pdf.php");
+	// require_once("includes/pdf.php");
+	// require_once("includes/pdf.aux.php");
+	
+	// $book_id = 2;
+	// $como_publicar_un_libro = "book/promocional/como_publicar_un_libro.pdf";
+	
+	// $result = mysql_query("SELECT * FROM books WHERE id = $book_id");
+	
+	// if ($result) {	
+		
+		// $row = mysql_fetch_object($result);
+		
+		// $book_id_str = str_pad($row->id, 9, "0", STR_PAD_LEFT);
+		// $pdf_preview_file_path = "book_preview/pdf/$book_id_str.pdf";
+		
+		
+		// $pdf = new PDFMerger;
+		// $pdf->addPDF($como_publicar_un_libro, 'all')
+			// ->addPDF($pdf_preview_file_path, '1-10')
+			// ->merge('file', 'book/promocional/como_publicar_un_libro_'.$book_id_str.'.pdf');
+
+		// // $row->pass;
+	// }
+	
+	
+	// die("FIM");
+	
+	/*********************************
+	*	LIBROS QUE TIENEN CARATULA QUE PUEDE SER BORRADA
+	**********************************/
+	// require_once("includes/db_connect.php");
+	// require_once("includes/books.pod.php");
+	
+	// $result = mysql_query("SELECT * FROM books WHERE (status = 0 OR status = 1 OR status = 2) AND id < 515 AND cover_style = 1");
+	// if ($result) {
+		// while ($row = mysql_fetch_object($result)) { 
+			
+			// if (file_exists("cover_creation/1_cover_images/cover_".$row->pass.".jpeg")) {
+				// if (unlink("cover_creation/1_cover_images/cover_".$row->pass.".jpeg"))
+					// echo $row->id . ' /cover_creation/1_cover_images/cover_'.$row->pass.'.jpeg BORRADO <BR>';
+				// else 
+					// echo $row->id . ' /cover_creation/1_cover_images/cover_'.$row->pass.'.jpeg ERROR <BR>';
+			// } else {
+				// echo $row->id . ' /cover_creation/1_cover_images/cover_'.$row->pass.'.jpeg NO EXISTE <BR>';
+			// }
+		// }
+	// }
+	
+	
+	/*********************************
+	*	IMPRIMIR PESO DEL LIBRO
+	**********************************/
+	// require_once("includes/db_connect.php");
+	// require_once("includes/books.pod.php");
+	
+	// $result = mysql_query("SELECT * FROM books");
+	// if ($result) {
+		// while ($row = mysql_fetch_object($result)) { 
+			// $new_weight = getBookWeight ($row->book_size, $row->book_binding, $row->book_paper_type, $row->book_color_type, $row->page_qty);
+			// echo "UPDATE books SET weight = " . $new_weight . " WHERE id = " . $row->id . "; <br>";
+		// }
+	// }
+	
+	
+	
+	
+	
+	/*********************************
+	*	BOOK SHADOW OPCAO NUMERO 2
+	**********************************/
+	// require_once("includes/db_connect.php");
+	// require_once("includes/cover_creation_pdf.php");
+	
+	// function bookPreviewShadow ($book_id) {
+		
+		// //Book id String
+		// $book_id_str = str_pad($book_id, 9, "0", STR_PAD_LEFT); 
+		
+		// $input_file = "book_preview/cover_thumb/$book_id_str.jpeg";
+		
+		// if (file_exists($input_file)) {
+			// list($im_width, $im_height) = getimagesize($input_file);
+			
+			// if ($im_height == 143) {
+				// $output_width = 103;
+				// $output_height = 154;
+				// $output_filename = "book_shadow_96x143.png";
+			// } else if ($im_height == 135) {
+				// $output_width = 103;
+				// $output_height = 146;
+				// $output_filename = "book_shadow_96x135.png";
+			// } else {
+				// echo "Libro $book_id_str mide $im_width x $im_height <br>";
+			// }
+			
+			// //Create Image for "Back Cover"
+			// $im = imagecreatetruecolor($output_width, $output_height);
+			
+			// //Background Color
+			// $background_color = imagecolorallocate($im, 255, 255, 255);
+			// imagefill($im, 0, 0, $background_color);
+			
+			// $cover = imagecreatefromjpeg("book_preview/cover_thumb_temp_2/$book_id_str.jpeg");
+			// $shadow = imagecreatefrompng("images/template/book_shadow/$output_filename");
+			// imagecopymerge ($im, $cover, 0, 0, 0, 0, $im_width, $im_height, 100);
+			// imagecopy ($im, $shadow, 0, 0, 0, 0, $output_width, $output_height);
+			
+			// imagejpeg($im, $target_file, 95);
+		// }
+	// }
+	
+	
+	
+	
+	
+	/*********************************
+	*	FOTOS DOS AUTORES EM MINIATURA 
+	**********************************/
+	// require_once("includes/db_connect.php");
+	// require_once("includes/users.php");
+	
+	// echo '<div style="border:1px #000 solid;width:248px;padding:5px 0px 0px 5px;">';
+	// $result = mysql_query("SELECT * FROM users_profile WHERE photo NOT LIKE 'anonimo.jpeg' LIMIT 30");
+	// if ($result) {
+		// while ($row = mysql_fetch_object($result)) { 
+			// // echo $row->username."<br>";
+			// // createThumb ("images/autor/".$row->photo, "images/autor/thumb_48/".$row->photo, 'square', 48);
+			// // createThumb ("images/autor/".$row->photo, "images/autor/thumb_256/".$row->photo, 'natural', 256);
+			// echo '<div style="float:left;width:36px;height:36px;margin: 0px 5px 5px 0px;"><img width="36" src="images/autor/thumb_48/'.$row->photo.'"></div>';
+		// }
+		// echo '<div style="clear:both;"></div>';
+	// }
+	// echo '</div>';
+	
+	
+	
+	
+	/*********************************
+	*	CONVERTER PDF PARA ESPACO DE CORES CMYK
+	**********************************/
+	// exec('convert file.pdf -density 600 -colorspace CMYK file-cmyk-2.pdf');
+	// exec('convert -density 600 logo.pdf[0] -resample 300 -quality 100 logo.png');
+	
+	
+	
+	
+	/*********************************
+	*	LISTADO DE PEDIDOS POR TAMANO , PESO Y NUMERO DE PAGINAS
+	**********************************/
+	// require_once("includes/currency.php");
+	
+	// $sqlselect = "SELECT orders.order_id, order_items.number_of_pages, order_items.paper_size, order_items.qty 
+					// FROM orders, order_items
+					// WHERE orders.order_id = order_items.order_id
+					// AND orders.order_status = 7";
+	
+	// $current_order_id = $last_order_id = -1;
+	// $result = mysql_query($sqlselect);
+	// if ($result) {
+		// $rowCheck = mysql_num_rows($result);
+		// if ($rowCheck > 0) { 
+			// while ($row = mysql_fetch_object($result)) { 
+				// $current_order_id = $row->order_id;
+				
+				// //If new order
+				// if ($last_order_id != $current_order_id) {
+					
+					// //Print the last order
+					// if ($last_order_id != -1) {
+						// echo "$last_order_id;$qty;$order_width;$order_depth;$order_height<br>";
+					// }
+					
+					// if ($row->paper_size == 1) {
+						// $order_width = "14";
+						// $order_depth = "21";
+					// } else if ($row->paper_size == 2) {
+						// $order_width = "17";
+						// $order_depth = "24";
+					// } else {
+						// $order_width = "unknown";
+						// $order_depth = "unknown";
+					// }
+					// $order_height = (getSpinWidth ($row->number_of_pages, $row->paper_type, 'mm') * $row->qty);
+					// $qty = $row->qty;
+				// } else { //Same order
+					// $order_height = $order_height + (getSpinWidth ($row->number_of_pages, $row->paper_type, 'mm') * $row->qty);
+					// $qty = $qty + $row->qty;
+				// }
+				// $last_order_id = $current_order_id;
+			// }
+		// }
+	// }
+	// echo "fim amiguinho";
+	
+	
+	
+	
+	
+	/*********************************
+	*	IMPRIMIR LISTADO DE PRECIOS DE LIBROS CON CONFIGURACION X
+	**********************************/
+	// for ($page_num = 20; $page_num <= 700; $page_num++) {
+		// list($success_1, $book_print_price, $book_print_currency) = getPrintPrice (47, 0, $page_num, 1, $paper_size = 2, $cover_binding = 1, $paper_type = 2, $color_type = 1, $mode = 'print');
+		
+		// //Get to_country_currency Currency Code (USD; COP; ARS...)
+		// $to_country_currency = getCountryCurrency ($to_country_id);
+		
+		// //Get book_print_price converted to to_country_currency Currency Code (USD; COP; ARS...)
+		// list($success_2, $book_print_price) = currencyConverter ($book_print_price, $book_print_currency, $to_country_currency);
+		
+		// echo $page_num . " ; " . $book_print_price . "<br>";
+		
+	// }
+	
+	
+	
+	
+	
+	/*********************************
+	*	PROPRIEDADES PARA QUE O LIBRO APARECA MELHOR NO GOOGLE
+	**********************************/
+	// <div itemscope="itemscope" itemtype="http://data-vocabulary.org/Review-aggregate">
+	// <span itemprop="itemreviewed">LíAmourita Pizza</span>
+	// <span itemprop="rating" itemscope="itemscope" itemtype="http://data-vocabulary.org/Rating">
+	// <span itemprop="average">3</span>
+	// out of <span itemprop="best">5</span>
+	// </span>
+	// based on <span itemprop="count">54</span> ratings.
+	// </div>
+	
+	
+	
+	
+	
+	/*********************************
+	*	OTIMIZAR BUSCA DE LIVROS
+	**********************************/
+	// echo levenshtein ( "" , "ludwing" );
+	
+	
+	
+	
+	
+	/*****************************************
+	*	ADD FACEBOOK COMENTS TO DATABASE
+	*****************************************/
+	// error_reporting(E_ALL);
+	
+	// // require_once("includes/db_connect_blog.php"); 
+	// // require_once("includes/comments.blog.php");
+	
+	// require_once("includes/db_connect.php"); 
+	// require_once("includes/facebook.php");
+	// require_once("includes/comments.php");
+	
+	// $accessToken = getAccessToken();
+	
+	// $output = getFacebookComment(441, $accessToken);
+	// foreach($output as $output_element) {
+		// echo addFBComment ($output_element, 441, 441);
+	// }
+	
+	
+	
+	// for ($xid = 637; $xid < 639; $xid++) {
+		// $output = getFacebookComment($xid, $accessToken);
+		// foreach($output as $output_element) {
+			// // echo addFBCommentToBlog ($output_element, $xid, $xid);
+			// echo "addFBComment ($output_element, $xid, $xid);<br>";
+			// echo addFBComment ($output_element, $xid, $xid);
+			
+		// }
+	// }
+	
+	
+	/********************************
+	FOLDERS TO BACKUP
+	
+	/_db_backups
+	/blog/wp-content/uploads
+	/book/pdf
+	/book_preview/cover_thumb
+	/book_preview/cover_thumb/bigger
+	/book_preview/pdf
+	/cover_creation/1_cover_images
+	/cover_creation/4_complete_cover_image
+	/cover_creation/4_complete_cover_image/thumbs
+	/cover_creation/5_cover_pictures/users_pictures
+	/cover_creation/8_left_flap
+	/cover_creation/9_right_flap
+	/images/autor
+	/images/autor/thumb_48
+	/images/autor/thumb_256
+	/imprenta/files/isbn
+	/imprenta/invoice
+	/orders
+	/services/sent_files
+	
+	echo off
+	For /f "tokens=1-4 delims=/ " %%a in ('date /t') do (set mydate=%%c%%b%%a)
+	echo %mydate%
+	
+	C:\Program Files\CoreFTP>
+	
+	corecmd.exe -s -ON -site Autores_Editores_Backup -d /book_preview/cover_thumb/*.*  -p C:\Backups\autoreseditores.com\book_preview\cover_thumb\ -output C:\Backups\autoreseditores.com_output.log  -log C:\Backups\autoreseditores.com_log.log
+	
+	
+	*********************************/
+	
+	
+	
+	/*****************************************
+	*	CLEAN HTML
+	*****************************************/
+	// 
+	
+	// $dirty_html = "<HTML>TESTE</HTML>";
+	
+	// $dirty_html = '<div>Lorem <b>ipsum </b>dolor sit <i>amet</i>, consectetur <u>adipiscing </u>elit. 
+	// Duis gravida leo eu nibh elementum eget feugiat libero venenatis. Suspendisse tempor, neque sed 
+	// sollicitudin mollis, ipsum nisl tincidunt ante, nec eleifend augue neque eget velit. Suspendisse potenti. 
+	// Suspendisse nec libero enim, pulvinar adipiscing lectus. Nam odio leo, tempus ac consequat vitae, malesuada 
+	// quis est. Praesent luctus diam non tellus tempus volutpat. Proin quam orci, ullamcorper quis viverra eget, 
+	// volutpat non magna. Suspendisse ut massa urna. Ut libero nulla, vulputate sed pellentesque eget, commodo id nisl. 
+	// Curabitur eu orci sit amet nulla iaculis aliquet. Nunc fringilla pellentesque laoreet. Aliquam vulputate rhoncus 
+	// metus nec consectetur.</div><div><br></div><div>Morbi ac purus orci. In malesuada ullamcorper erat eu pulvinar. 
+	// Morbi sed metus in ante feugiat dapibus quis nec mauris. In tristique ornare elementum. Nam dictum neque purus. 
+	// Morbi elementum fringilla urna euismod rutrum. Nam non elit sed sem pretium tincidunt.</div><div><br>
+	// </div><div style="text-align: center;" center;\"="">Donec fermentum tortor euismod sem mattis aliquam. 
+	// Ut tempus rhoncus mauris, at tincidunt eros fermentum id. Aenean viverra ipsum ut felis tempus eget cursus 
+	// sapien dignissim. Donec dapibus risus in tortor vestibulum id venenatis enim varius. Etiam tincidunt rutrum 
+	// lacus, eu volutpat nisl placerat et. Cras tristique, mi eu vestibulum rutrum, lectus sem mattis velit, mollis 
+	// vestibulum elit elit quis quam. Phasellus vitae convallis justo. Morbi id fermentum enim. Sed sed sem orci, at 
+	// adipiscing dui. Sed sagittis euismod vulputate. Curabitur euismod, quam in faucibus viverra, turpis sem tincidunt 
+	// urna, a pharetra nisi nibh in mauris.</div><div><br></div><div style="text-align: right;" right;\"="">Phasellus 
+	// tempus mauris at libero molestie vel varius erat malesuada. Quisque nunc nisi, mattis in consequat a, ultrices at 
+	// dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sem dolor, rhoncus 
+	// sed gravida ut, laoreet sed turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+	// himenaeos. In et gravida massa. Vivamus cursus diam eget tellus cursus tempus. Sed sed volutpat massa.</div><div><br></div>
+	// <div style="text-align: justify;" justify;\"="">Sed molestie laoreet felis sed lobortis. In nec nisl odio. Integer 
+	// egestas auctor tortor, eget lacinia eros sollicitudin id. Donec lobortis, nisi et congue condimentum, lorem nisi semper 
+	// felis, nec eleifend nulla mauris ut sapien. Cras tincidunt mauris vel enim accumsan dictum. Phasellus eu tortor eu risus 
+	// placerat viverra. Vestibulum et eros felis. Mauris ullamcorper, nibh vel tempor dapibus, nulla tortor ullamcorper sapien, 
+	// eu pellentesque dolor lacus non massa. Duis sit amet nulla a lacus facilisis sodales id a velit. Quisque at ornare nulla. 
+	// Donec euismod arcu varius purus ullamcorper pretium sed ut diam.</div><div><br></div><div><ol><li>Sed molestie laoreet felis 
+	// sed lobortis.&nbsp;</li><li>In nec nisl odio. Integer egestas auctor tortor, eget lacinia eros sollicitudin id.&nbsp;</li><li>Donec
+	// lobortis, nisi et congue condimentum, lorem nisi semper felis, nec eleifend nulla mauris ut sapien. Cras tincidunt mauris vel 
+	// enim accumsan dictum.&nbsp;</li></ol><ul><li>Phasellus eu tortor eu risus placerat viverra.&nbsp;</li><li>Vestibulum et 
+	// eros felis.&nbsp;</li><li>Mauris ullamcorper, nibh vel tempor dapibus, nulla tortor ullamcorper sapien, eu pellentesque 
+	// dolor lacus non massa.&nbsp;</li><li>Duis sit amet <sub>nulla </sub>a lacus facilisis sodales id <sup>a</sup> velit. Quisque
+	// at ornare nulla. Donec <strike>euismod </strike>arcu varius purus ullamcorper pretium sed ut diam.</li></ul></div><div><br></div>
+	
+	// <blockquote style="\&quot;margin:" 0="" 40px;="" border:="" none;="" padding:="" 0px;\"="">
+	// <blockquote style="\&quot;margin:" 0="" 40px;="" border:="" none;="" padding:="" 0px;\"=""><div>Sed molestie laoreet 
+	// felis sed lobortis. In nec nisl odio. Integer egestas auctor tortor, eget lacinia eros sollicitudin id. Donec lobortis, 
+	// nisi et congue condimentum, lorem nisi semper felis, nec eleifend nulla mauris ut sapien. Cras tincidunt mauris vel enim 
+	// accumsan dictum. Phasellus eu tortor eu risus placerat viverra. Vestibulum et eros felis. Mauris ullamcorper, nibh vel tempor 
+	// dapibus, nulla tortor ullamcorper sapien, eu pellentesque dolor lacus non massa. Duis sit amet nulla a lacus facilisis sodales 
+	// id a velit. Quisque at ornare nulla. Donec euismod arcu varius purus ullamcorper pretium sed ut diam.</div></blockquote></blockquote>
+	// <div><br></div><blockquote style="margin:0 40px;"><div>Sed molestie laoreet 
+	// felis sed lobortis. In nec nisl odio. Integer egestas auctor tortor, eget lacinia eros sollicitudin id. Donec lobortis, nisi et congue 
+	// condimentum, lorem nisi semper felis, nec eleifend nulla mauris ut sapien. Cras tincidunt mauris vel enim accumsan dictum. Phasellus 
+	// eu tortor eu risus placerat viverra. Vestibulum et eros felis. Mauris ullamcorper, nibh vel tempor dapibus, nulla tortor ullamcorper 
+	// sapien, eu pellentesque dolor lacus non massa. Duis sit amet nulla a lacus facilisis sodales id a velit. Quisque at ornare nulla. 
+	// Donec euismod arcu varius purus ullamcorper pretium sed ut diam.</div><div><br></div><div><br></div></blockquote>
+	// <iframe>sinistrao</iframe>';
+	
+	
+	// $html_elements = 'div[style],b,i,u,br,ol,li,ul,sup,sub,strike,blockquote[style],img[src|alt|width|height]';
+	// $css_properties = 'text-align,margin';
+	
+	// $config = HTMLPurifier_Config::createDefault();
+	// $config->set('HTML.Allowed', $html_elements);
+	// $config->set('CSS.AllowedProperties', $css_properties);
+        
+	// $purifier = new HTMLPurifier($config);
+	// $clean_html = $purifier->purify($dirty_html);
+	
+	// echo $clean_html;
+?>

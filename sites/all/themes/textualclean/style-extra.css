@@ -1,0 +1,304 @@
+/* layout */
+
+body .panel-3col-stacked .panel-col-first {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 240px;
+}
+
+body .panel-3col-stacked .panel-col {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 440px;
+}
+
+body .panel-3col-stacked .panel-col-last {
+  float: left;
+  width: 240px; 
+}
+
+body .panel-3col-stacked .panel-col-last .inside {
+  margin: 0;
+}
+.front #block-views-contentblocks-block-3 .views-field-title a{
+  line-height: 1.1;
+}
+/* Home */
+#block-views-contentblocks-block-3 .views-field-title a {
+    color: #CE306F;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2em;
+    text-decoration: none;
+}
+
+#block-views-contentblocks-block-3 .views-field-body .field-content {
+    font-weight: normal;
+    line-height: 1.2em;
+}
+.pane-quicktabs-top-sell,
+#block-quicktabs-top-sell {
+  border: none;
+  padding: 20px 5px 5px;
+  margin-top: 35px;
+  border-top: #CE316F 2px solid;
+  border-radius: 0;
+}
+
+.pane-quicktabs-top-sell > h2,
+#block-quicktabs-top-sell > h2,
+#quicktabs-top_sell > h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.pane-quicktabs-top-sell .content{
+    padding: 5px;
+}
+.block-quicktabs .ui-tabs .ui-tabs-nav li,
+.quicktabs-ui-wrapper .ui-tabs-nav li {
+    border: none;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    background: #CE316F;
+    width: 229px;
+    margin: 0; 
+}
+.pane-quicktabs-top-sell .ui-tabs .ui-tabs-nav li.ui-state-active{
+  border-bottom: none;
+}
+.pane-quicktabs-top-sell .ui-tabs .ui-tabs-nav li a,
+#block-quicktabs-top-sell .ui-tabs .ui-tabs-nav li a,
+#quicktabs-top_sell .ui-tabs .ui-tabs-nav li a {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    color: white;  
+    outline: none;
+}
+
+.pane-quicktabs-top-sell .ui-tabs .ui-widget-header,
+#block-quicktabs-top-sell .ui-tabs .ui-widget-header,
+#quicktabs-top_sell .ui-tabs .ui-widget-header {
+  background-color: #F8F8F8;
+}
+
+#quicktabs-top_sell .views-field-sell-price .uc-price {
+    color: #0070BA;
+}
+
+/* footer */
+.region-footer .menu a {
+    color: #777777;
+}
+
+.region-footer .block-menu ul li {
+  list-style: none;
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.region-footer .block-menu h2 {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #111111;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.region-footer .block-menu h2 span {
+  background: none;
+}
+
+#block-menu-menu-footer-editorial {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    height: 260px;
+    width: 220px;
+    margin: 0 20px 0 0;
+}
+#block-menu-menu-footer-libreria {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    height: 260px;
+    width: 220px;
+    margin: 0 20px 0 0;
+}
+#block-menu-menu-footer-revista {
+    float: left;
+    margin: 120px 0 0 -240px;
+    width: 240px;
+}
+#block-menu-menu-footer-formacion {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    height: 260px;
+    width: 220px;
+    margin: 0 20px 0 0;
+}
+#block-menu-menu-footer-otras-categorias {
+  float: left;
+  width: 240px;
+}
+#block-menu-menu-footer-ayuda {
+    float: left;
+    margin: 120px 0 0 -240px;
+    width: 240px;
+}
+#block-menu-menu-footer-otras-categorias {
+
+}
+/* Pagina productos */
+.pane-menu-menu-categorias-libros .menu {
+  margin: 0;
+  padding: 0;
+}
+.pane-menu-menu-categorias-libros ul.menu li {
+    border-bottom: 1px dotted #CCCCCC;
+    font-size: 12px;
+    font-weight: bold;
+    list-style: none outside none;
+    padding: 10px 6px;
+}
+/* Recomendados */
+.block_recomendados {
+    border: 1px solid #CCCCCC;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.views-field-field-author a {
+    color: #555555;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.block_recomendados .view-filters {
+  display: none;
+}
+}
+.block_recomendados .pane-content {
+  padding: 5px;
+}
+
+.block_recomendados h2.pane-title {
+    border-left: 5px solid #CE316F;
+    padding: 5px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.libros-recomendado .views-field-title a {
+    color: #CE316F;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.libros-recomendado .views-row {
+    border-bottom: 1px solid #CCCCCC;
+    min-height: 105px;
+    overflow: hidden;
+    padding: 5px 0;
+}
+.libros-recomendado .view-content .views-field-sell-price,
+.libros-recomendado .view-content .views-field-field-author,
+.libros-recomendado .view-content .views-field-title {
+    display: block;
+    margin: 5px 0 0 115px;
+    width: 180px;
+} 
+.libros-recomendado .view-content .views-field-field-author {
+  text-transform: uppercase;
+}
+.libros-recomendado .view-content .views-field-sell-price .uc-price {
+  font-size: 14px;
+  color: #222;
+  margin: 0
+}
+.libros-recomendado .views-field-uc-product-image {
+    float: left;
+}
+h2.pane-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2.pane-title a{
+  color: black;
+  text-decoration: none;
+  }
+/* Paginas mas leidas */
+.pane-paginas-mas-leidas {
+  margin: 0 0 20px 0;
+}
+
+.pane-proximos-eventos .pane-title,
+.pane-paginas-mas-leidas .pane-title {
+    background: url("images/franja-morada.png") no-repeat scroll 0 bottom rgba(0, 0, 0, 0);
+    margin: 0 0 10px;
+    padding: 0 0 15px;
+    text-transform: uppercase;
+}
+/* Node type Productos*/
+body.node-type-product .pane-node-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  padding: 15px 0 5px;
+}
+
+.view-paginas-mas-leidas {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.view-paginas-mas-leidas .views-row {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 4px 0;
+}
+
+.pane-paginas-mas-leidas .views-field-counter {
+    width: 35px;
+}
+
+.pane-paginas-mas-leidas .views-field {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.view-paginas-mas-leidas .contador_resultados {
+    color: #AAAAAA;
+    font-size: 35px;
+    margin: 0 10px 0 5px;
+}
+
+.view-paginas-mas-leidas .campo_texto_mas_leidas {
+  display: inline-block;
+  width: 189px;
+  line-height: 1.1 !important;
+  text-align: left;
+}
+
+.view-paginas-mas-leidas .views-row.views-row-last {
+  border-bottom: none;
+  padding: 3px 0;
+}
+
+.view-display-id-commingevents .views-row a { color: #CE306F; text-decoration: none; font-weight: bold; }
+
+.pane-proximos-eventos .views-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#uc-product-add-to-cart-form-67--2 .node-add-to-cart {
+  background: #ed1a40;
+}
+

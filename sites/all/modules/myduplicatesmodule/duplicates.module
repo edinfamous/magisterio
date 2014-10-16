@@ -1,0 +1,17 @@
+<?php
+function duplicates_views_pre_render(&$view)
+{
+  $used_nids = array();
+          foreach (
+
+$view->result as $row)
+      {
+        if (!in_array($row->nid, $used_nids))
+        {
+          $new_view_result[] = $row;
+          $used_nids[] = $row->nid;
+        }
+      }
+   
+      $view->result = $new_view_result;
+    }
