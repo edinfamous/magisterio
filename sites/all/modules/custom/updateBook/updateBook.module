@@ -1,0 +1,59 @@
+<?php
+function updateBook_cron() {
+    foreach ($result as $product) {
+        $module = 'updateBook';
+
+        $from = 'info@encefalo.co';
+
+        $user_account = user_load($product['uid']);
+        $product_detail = node_load($product['nid']);
+
+        $to_user_mail = $user_account->mail;
+
+        // build the email
+        $message = drupal_mail($module, $key, $to_user_mail, LANGUAGE_NONE, array(), $from, FALSE);
+
+        //$message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+        $message['headers']['Cc'] = 'cc_email@test.com';
+        $message['headers']['Reply-To'] = 'reply_to_email@test.com';
+
+        $message['subject'] = 'THE SUBJECT';
+
+        $message['body'] = array();
+        $message['body'][] = 'Dear ' . $user_account->name;
+        $message['body'][] = '...';
+        $message['body'][] = 'Regards,';
+        $message['body'][] = 'YOUR NAME';
+
+        // retrieve the responsible implementation for this message.
+        $system = drupal_mail_system($module, $key);
+
+        // format the message body.
+        $message = $system->format($message);
+
+        // send e-mail
+        $message['result'] = $system->mail($message);
+    }
+}
+
+
+
+	$timeZoneServer =  date_default_timezone_get();
+	$urlCSV ='';
+	if($timeZoneServer === 'America/Bogota'){
+		$urlCSV ='http://www.tinformatica.com/ADN/ART_MOD2'.date(d-m-y);
+	}else {
+		date_default_timezone_set ('America/Bogota');
+		$urlCSV ='http://www.tinformatica.com/ADN/ART_MOD2'.date(d-m-y);
+	}
+	function url_exists($url) {
+        $ch = @curl_init($url);
+        @curl_setopt($ch, CURLOPT_HEADER, TRUE);
+        @curl_setopt($ch, CURLOPT_NOBODY, TRUE);
+        @curl_setopt($ch, CURLOPT_FOLLOWLOCATION, FALSE);
+        @curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        $status = array();
+        preg_match('/HTTP\/.* ([0-9]+) .*/', @curl_exec($ch) , $status);
+        return ($status[1] == 200);
+    }
+?>
