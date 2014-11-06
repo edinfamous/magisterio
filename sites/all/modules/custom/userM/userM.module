@@ -1,0 +1,20 @@
+<?php
+function userM_menu(){
+    $items['user/changed-password'] = array(
+        'title' 			=> 'Change password',
+        'type' 				=> MENU_NORMAL_ITEM,
+        'menu_name' 		=> 'user-menu',
+    	'access callback'	=> 'user_is_logged_in',
+    	'page callback' 	=> 'change_password',
+    	'file' 				=> 'userM.page.inc',
+    );
+    $items['user/preferences'] = array(
+        'title' 			=> 'My preferences',
+        'type' 				=> MENU_NORMAL_ITEM,
+        'menu_name' 		=> 'user-menu',
+    	'access callback'	=> 'user_is_logged_in',
+    	'page callback' 	=> 'user_preferences',
+    	'file' 				=> 'userM.page.inc',
+    );
+    return $items;
+}

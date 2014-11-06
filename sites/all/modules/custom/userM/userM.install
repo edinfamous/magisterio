@@ -1,0 +1,72 @@
+<?php
+function userM_schema() {
+  $schema['user_magis'] = array(
+    'description' => 'The base table for user_magis.',
+    'fields' => array(
+      'pid' => array(
+        'description' => 'The primary key',
+        'type' => 'int',
+      	'not null' => TRUE,
+    	'auto increment' => TRUE,
+      ),
+      'uid' => array(
+        'description' => 'The primary identifier for a user external.',
+        'type' 		  => 'int',
+      	'not null' 	  => TRUE
+      ),
+      'date_birth' => array(
+        'description' => 'The current webid version identifier in uid.',
+        'type' => 'varchar',
+       	'length' => 254,
+        'not null' => TRUE
+      ),
+      'workflow' => array(
+        'description' => 'workflow',
+        'type' => 'varchar',
+       	'length' => 254,
+        'not null' => TRUE
+      ),
+      'typeInstitution' => array(
+        'description' => 'Type institution',
+        'type' => 'varchar',
+       	'length' => 254,
+        'not null' => TRUE
+      ),
+      'characterInstitution' => array(
+        'description' => 'Character institution',
+        'type' => 'int',
+        'not null' => TRUE
+      ),
+      'zoneInstitution' => array(
+        'description' => 'Zone institution',
+        'type' => 'int',
+        'not null' => TRUE
+      ),
+      'charge' => array(
+        'description' => 'charge in institution',
+        'type' => 'varchar',
+       	'length' => 254,
+        'not null' => TRUE
+      ),
+      'ocupation' => array(
+        'description' => 'Ocupation in institution',
+        'type' => 'varchar',
+       	'length' => 254,
+        'not null' => TRUE
+      ),
+      'events' => array(
+        'description' => 'Events in magisterio',
+        'type' => 'int',
+        'not null' => TRUE
+      ),
+    ),
+    'foreign keys' => array(
+        'user_weid' => array(
+        'table' => 'users',
+        'columns' => array('uid' => 'uid'),
+      ),
+    ),
+    'primary key' => array('pid')
+  );
+  return $schema;
+}
