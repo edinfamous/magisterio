@@ -1,0 +1,4 @@
+name = User Magistario
+description = Custom views user
+core = 7.x
+package = userM

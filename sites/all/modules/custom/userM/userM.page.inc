@@ -6,16 +6,13 @@
  * @return multitype:string number boolean NULL
  */
 
-function page_usuario_register($form, &$form_state){
-	if (user_is_anonymous()) {
-	    return drupal_access_denied(); // Or drupal_access_denied()?
-	  }
+function change_password_m($form, &$form_state){
 	// Get the currently logged in user object.
 	$form['#account'] = $GLOBALS['user'];
 	// Textfield cor current password confirmation.
   	$form['current_pass'] = array(
 	    '#type' => 'password',
-	    '#title' => t('Current password'),
+	    '#title' => t('Old password'),
 	    '#size' => 25,
 	    '#required' => TRUE
   	);
@@ -33,7 +30,7 @@ function page_usuario_register($form, &$form_state){
   	return $form;  
 }
 
-function page_usuario_register_validate(&$form, &$form_state){
+function change_password_m_validate(&$form, &$form_state){
 	require_once DRUPAL_ROOT . '/' . variable_get('password_inc', 'includes/password.inc');
 	
 	// Make sure the provided current password is valid for this account.
@@ -43,9 +40,9 @@ function page_usuario_register_validate(&$form, &$form_state){
 }
 
 /**
- * Submit handler for change_password_form().
+ * Submit handler for change_password_m_form().
  */
-function page_usuario_register_submit(&$form, &$form_state) {
+function change_password_m_submit(&$form, &$form_state) {
 	  // Set up the edit array to pass to user_save()
 	  $edit = array('pass' => $form_state['values']['pass']);
 	
@@ -66,14 +63,24 @@ function page_usuario_register_submit(&$form, &$form_state) {
 */
  
 function user_preferences($form, &$form_state){
+	// Provide a default date in the format YYYY-MM-DD HH:MM:SS.
 	if (user_is_anonymous()) {
 	    return drupal_access_denied(); // Or drupal_access_denied()?
 	  }
-  	$form['date-birth'] = array(
-	    '#type' => 'date',
-	    '#title' => t('Date of birth'),
-	    '#required' => TRUE
-  	);
+
+	  
+	 
+  	 $form['date-birth'] = array(
+		'#type' => 'date_select',
+		'#title' => t('Date of birth'),
+		'#default_value' => date("Y-m-d", date()),
+		'#date_format' => "Y-m-d",
+		'#date_year_range' => '-0:+2',
+		'#states' => array(
+				'visible' => array(':input[name="set_dates"]' => array('value' => 1)),
+				)
+
+);
 	$form['workplace'] = array(
 	    '#type' => 'textfield',
 	    '#size' => 25,

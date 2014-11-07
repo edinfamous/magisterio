@@ -1,18 +1,20 @@
 <?php
 function userM_menu(){
-    $items['user/changed-password'] = array(
-        'title' 			=> 'Change password',
-        'type' 				=> MENU_NORMAL_ITEM,
-        'menu_name' 		=> 'user-menu',
+    $items['user/%user/changed-password'] = array(
+        'title' 			=> t('Change your password'),
+        'type' 				=> MENU_LOCAL_TASK,
+        //'menu_name' 		=> 'user-menu',
     	'access callback'	=> 'user_is_logged_in',
-    	'page callback' 	=> 'change_password',
+    	'page callback' 	=> 'change_password_m',
+    	//'page arguments' 	=> 'change_password_m',
     	'file' 				=> 'userM.page.inc',
     );
-    $items['user/preferences'] = array(
+    $items['user/%user/preferences'] = array(
         'title' 			=> 'My preferences',
-        'type' 				=> MENU_NORMAL_ITEM,
-        'menu_name' 		=> 'user-menu',
+        'type' 				=> MENU_LOCAL_TASK,
+        //'menu_name' 		=> 'user-menu',
     	'access callback'	=> 'user_is_logged_in',
+    	//'page arguments' 	=> 'user_preferences',
     	'page callback' 	=> 'user_preferences',
     	'file' 				=> 'userM.page.inc',
     );
