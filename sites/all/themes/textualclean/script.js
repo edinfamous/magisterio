@@ -71,6 +71,8 @@
 
 		$(document).ajaxComplete(function(event, jqXHR, settings){
 			var mydata =  jQuery.parseJSON(jqXHR.responseText);
+			console.log('mydata');
+			console.log(mydata);
 			if(mydata[1].command === 'ucAjaxCartAltAddItemSuccess'){
 				if ( $('body').hasClass('logged-in') ){
 					location.reload();
@@ -95,11 +97,15 @@
 			}
 
 			if(mydata[1].command === 'viewsScrollTop'){
-				$.fn.coloresTopicos();
-
-			$.fn.revistaActual();
-
-		}
+				$.fn.revistaActual();
+			}
+			if(mydata[1].selector === '#payment-pane'){
+				jQuery('.page-cart-checkout .form-radios div:nth-of-type(2)').append('<ul class="pago-colombia"><li>Tarjeta de crédito<img src="/sites/all/imagenesfancybox/visa.gif"/><img src="/sites/all/imagenesfancybox/master.gif"/><img src="/sites/all/imagenesfancybox/american.png"/><img src="/sites/all/imagenesfancybox/diners.gif"/></li><li>Pago con tarjeta débito de ahorros o corriente<img src="/sites/all/imagenesfancybox/pse.png"/></li><li>Pago en efectivo en bancos Bancolombia, Occidente Banco de Bogotá<img src="/sites/all/imagenesfancybox/codigo.png"/></li><li>Pago en efectivo en Puntos Vía Baloto<img src="/sites/all/imagenesfancybox/baloto.gif"/></li></ul>');
+				jQuery('.page-cart-checkout .form-radios div:nth-of-type(2) label').html('Pago en Colombia');	
+				jQuery('.page-cart-checkout .form-radios div:nth-of-type(1) label').html('Fuera de Colombia');
+				jQuery('.page-cart-checkout .form-radios div:nth-of-type(1)').append('<ul class="fuera-colombia pago-colombia"><li>Tarjeta de crédito y pagos Paypal<img src="/sites/all/imagenesfancybox/paypal.gif"/></li></ul>');
+				$('.page-cart-checkout #edit-panes-payment-payment-method .form-item').append('<a class="medios-de-pago" href="/node/29">¿Cómo funciona?</a>');
+			}
 
 	});
 
@@ -175,7 +181,7 @@
 			}
 		});
 
-$.fn.coloresTopicos();
+//$.fn.coloresTopicos();
 $.fn.revistaActual();
 if($('.page-user.logged-in td.cart-block-summary-items').text() != 'Tienes (0) productos')
 	$('.page-user.logged-in .profile').append('<a class="ircheckout" href="/cart">Ir al carrito de compras</a>');
@@ -219,14 +225,15 @@ else{
 		var cursoentrada = jQuery.trim(jQuery('.curso-detalle .panel-2col .pane-node-title .pane-content').text());
 		if (entrada == 'entrada libre' || entrada == 'Entrada libre' || entrada == 'entrada-libre'){
 			$('.curso-detalle .muestra-form').html('');
-			$('.curso-detalle .panel-pane.pane-custom.pane-1').html('<a class="entrada-libre" href="/content/entrada-libre?curso='+cursoentrada+'">Incribirse en curso de entrada libre</a>');
+			jQuery('.curso-detalle .panel-pane.pane-custom.pane-1').html(' ');
+			//$('.curso-detalle .panel-pane.pane-custom.pane-1').html('<a class="entrada-libre" href="/content/entrada-libre?curso='+cursoentrada+'">Incribirse</a>');
 			//oculta modulos de la derecha
-			$('.curso-detalle .panel-pane.pane-custom.pane-2').hide();
+			$('.curso-detalle .panel-pane.pane-custom.pane-2 > .pane-content').hide();
 			$('.curso-detalle .panel-pane.pane-custom.pane-3').hide();
 			$('.curso-detalle .panel-pane.pane-entity-field-extra.pane-node-add-to-cart').hide();
 
 			$('.curso-detalle .field.field-name-uc-product-image').addClass('entrada-libre-titulo')
-			$('.curso-detalle .panels-ipe-portlet-marker .pane-node-field-field-fecha-inicio').css('border-top','1px solid #CCC');
+			$('.curso-detalle .pane-node-field-field-fecha-inicio').css('border-top','1px solid #CCC');
 		}
 		var nombrecursoent = unescape(location.search.replace('?', '').split('=')[1]);
 		$('.page-node-581726 .webform-client-form div #edit-submitted-nombre-del-curso').val(nombrecursoent);
@@ -235,6 +242,9 @@ else{
 
 
 $( document ).ready(function() {
+
+	jQuery('.page-node-82 .webform-confirmation > p').html(' Hemos recibido tu solicitud. Te enviaremos un respuesta lo más pronto posible. !Gracias!<br></br>');
+	jQuery('.form-item-comment-body-und-0-value label').html('Haz tu comentario<span class="form-required" title="Este campo es obligatorio.">*</span>');
 
 	setTimeout(function () {
 		jQuery('.custom-filter ul li:nth-of-type(2)').trigger('click');	
@@ -249,14 +259,15 @@ $( document ).ready(function() {
 		if (precio == '$0')
 			jQuery('.formacion-general.view-cursos .views-row-'+i+' .views-field-sell-price span span').text('Entrada libre');
 		if (fecha == '')
-			jQuery('.formacion-general.view-cursos .views-row-'+i+' .views-field-field-field-fecha-inicio .field-content').text('Disponible');
+			jQuery('.formacion-general.view-cursos .views-row-'+i+' .views-field-field-field-fecha-inicio .field-content').text('Abierto');
 	}
 
 	//home de formacion
 	for (var i = 1; i <= numdivhome; i++){
 		var link = jQuery('.formacion-general .view-formacion .views-row-'+i+' .views-field-title span a').attr('href');  
+		var preciohome = jQuery('.formacion-general .view-formacion .views-row-'+i+' .views-field-sell-price span span').text();
 		jQuery('.formacion-general .view-formacion .views-row-'+i+'').append('<a class="btn-ver-mas-cursos" href="'+link+'">Ver más</a>');
-		if (precio == '$0')
+		if (preciohome == '$0')
 			jQuery('.formacion-general .view-formacion .views-row-'+i+' .views-field-sell-price span span').text('Entrada libre');
 
 	}
@@ -275,7 +286,11 @@ $( document ).ready(function() {
   $('.page-user.not-logged-in .form-item.form-type-password.form-item-pass input').removeAttr('placeholder');
   $('.suscripciones #edit-attributes-4-9').attr('checked', true);
   /*metodos de pago*/
-  $('.page-cart-checkout #edit-panes-payment-payment-method .form-item').append('<a class="medios-de-pago" href="/node/29">Cómo funciona.</a>');
+  jQuery('.page-cart-checkout .form-radios div:nth-of-type(2)').append('<ul class="pago-colombia"><li>Tarjeta de crédito<img src="/sites/all/imagenesfancybox/visa.gif"/><img src="/sites/all/imagenesfancybox/master.gif"/><img src="/sites/all/imagenesfancybox/american.png"/><img src="/sites/all/imagenesfancybox/diners.gif"/></li><li>Pago con tarjeta débito de ahorros o corriente<img src="/sites/all/imagenesfancybox/pse.png"/></li><li>Pago en efectivo en bancos Bancolombia, Occidente Banco de Bogotá<img src="/sites/all/imagenesfancybox/codigo.png"/></li><li>Pago en efectivo en Puntos Vía Baloto<img src="/sites/all/imagenesfancybox/baloto.gif"/></li></ul>');
+  jQuery('.page-cart-checkout .form-radios div:nth-of-type(2) label').html('Pago en Colombia');	
+  jQuery('.page-cart-checkout .form-radios div:nth-of-type(1) label').html('Fuera de Colombia');
+  jQuery('.page-cart-checkout .form-radios div:nth-of-type(1)').append('<ul class="fuera-colombia pago-colombia"><li>Tarjeta de crédito y pagos Paypal<img src="/sites/all/imagenesfancybox/paypal.gif"/></li></ul>');
+  $('.page-cart-checkout #edit-panes-payment-payment-method .form-item').append('<a class="medios-de-pago" href="/node/29">¿Cómo funciona?</a>');
   $('.ajax-register-links-wrapper .ajax-register-links li.last a').text('Olvidé mi contraseña');
   $('.page-cart-checkout #customer-pane span').text('DATOS DE ENVÍO');
 
@@ -331,10 +346,11 @@ $( document ).ready(function() {
   	var timelineTar = $(event.target);
   	$('.timelineDate').removeClass('active');
   	$(timelineTar).addClass('active'); 
-  	$('.page-revista-numeros-anteriores #edit-field-a-o-de-edici-n-value').val( timelineTar.text() );
-  	$( '.page-revista-numeros-anteriores #edit-field-a-o-de-edici-n-value' ).trigger( 'change' );
+  	$('.page-revista-numeros-anteriores #edit-field-a-o-de-edici-n-value-value-date').val( timelineTar.text() );
+  	$('.page-revista-numeros-anteriores #edit-field-a-o-de-edici-n-value-value-date').trigger('change');
   });
 
+	/*
   $('.resultados-topicos .custom-filter ul li').click(function (event){
   	var opcionLista = $(event.target);
   	var opcionFiltro = "";
@@ -369,6 +385,7 @@ $( document ).ready(function() {
   	$('.resultados-topicos #edit-type').trigger('change');
 
   });
+  */
 
   $('#reiniciar-boton').on('click', function(){
   	reinicia();

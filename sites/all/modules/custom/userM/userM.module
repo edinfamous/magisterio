@@ -1,7 +1,7 @@
 <?php
 function userM_menu(){
     $items['user/%user/changed-password'] = array(
-        'title' 			=> t('Change your password'),
+        'title' 			=> 'Cambiar Contraseña',
         'type' 				=> MENU_LOCAL_TASK,
         //'menu_name' 		=> 'user-menu',
     	'access callback'	=> 'user_is_logged_in',
@@ -19,4 +19,65 @@ function userM_menu(){
     	'file' 				=> 'userM.page.inc',
     );
     return $items;
+}
+
+
+/**
+ * Alter Form
+ */
+ function userM_form_alter($form, &$form_state, $form_id){
+ 	 $url = dameURL();
+ 	 if(strpos($url,'edit')!==false){	
+ 	 switch ($form_id) {
+	    	case 'user_profile_form':
+	        	$form['account']['current_pass']['#access'] = 0;
+	        	$form['account']['name']['#access'] = 0;
+	        	$form['account']['mail']['#access'] = 0;
+    			$form['account']['status']['#access'] = 0;
+    			$form['account']['roles']['#access'] = 0;
+    			$form['field_user_ubicaci_n']['#access'] = 0;
+			    $form['field_terminos']['#access'] = 0;
+			    $form['picture']['#access'] = 0;
+			    $form['timezone']['#access'] = 0;
+			    $form['account']['pass']['#access'] = 0;
+			    $form['field_lugar_de_trabajo']['#access'] = 0;
+			    $form['field_user_ubicaci_n']['#access'] = 0;
+			    $form['field_caracter_institucion']['#access'] = 0;
+			    $form['field_zona_institucion']['#access'] = 0;
+			    $form['field_has_participado']['#access'] = 0;
+			    $form['field_terminos']['#access'] = 0;
+			    $form['field_fecha_de_nacimiento']['#access'] = 0;
+			    $form['picture']['#access'] = 0;
+			    $form['timezone']['#access'] = 0;
+			    $form['field_cargo']['#access'] = 0;
+			    $form['field_ocupaci_n']['#access'] = 0;	    
+	        break;
+		}
+ 	 }
+	 switch ($form_id) {
+				case 'uc_cart_checkout_form':
+					global $user;
+					$phat_module = drupal_get_path('module', 'userM');
+ 		    		drupal_add_js($phat_module.'/js/custom.js');
+  		    		$form['delivery_delivery_first_name']['#default_value']=$user->name;
+		    	break;
+				case 'user_register_form':
+					$form['field_apellidos']['#access'] 			= FALSE;
+					$form['field_n_mero_identificaci_n']['#access'] = FALSE;
+					$form['field_tipo_identificaci_n']['#access'] 	= FALSE;
+				break;
+			}
+ }
+ 
+ /**
+  * Formulario ubert car uc-cart-checkout-form
+  */
+ 
+ 
+ /**
+  * obtener url 
+  */
+function dameURL(){
+	$url="https://".$_SERVER['HTTP_HOST'].":".$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
+	return $url;
 }

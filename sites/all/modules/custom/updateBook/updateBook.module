@@ -2,10 +2,10 @@
 $timeZoneServer =  date_default_timezone_get();
 	$urlCSV ='';
 	if($timeZoneServer === 'America/Bogota'){
-		$urlCSV ='http://www.tinformatica.com/ADN/ART_MOD2'.date(d-m-y);
+		$urlCSV ='http://www.tinformatica.com/ADN/ART_MOD2'.date(d-m-y).'.csv';
 	}else {
 		date_default_timezone_set ('America/Bogota');
-		$urlCSV ='http://www.tinformatica.com/ADN/ART_MOD2'.date(d-m-y);
+		$urlCSV ='http://www.tinformatica.com/ADN/ART_MOD2'.date(d-m-y).'.csv';
 	}
 	function url_exists($url) {
         $ch = @curl_init($url);
@@ -21,10 +21,12 @@ $timeZoneServer =  date_default_timezone_get();
 function updateBook_cron() {
 	$csv = file_get_contents($urlCSV);
 	
-    foreach ($result as $product) {
+    foreach ($csv as $product) {
         $module = 'updateBook';
         $from = 'info@encefalo.co';
-
+		
+        
+        
         $user_account = user_load($product['uid']);
         $product_detail = node_load($product['nid']);
 

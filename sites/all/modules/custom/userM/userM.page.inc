@@ -7,50 +7,38 @@
  */
 
 function change_password_m($form, &$form_state){
-	// Get the currently logged in user object.
-	$form['#account'] = $GLOBALS['user'];
-	// Textfield cor current password confirmation.
-  	$form['current_pass'] = array(
-	    '#type' => 'password',
-	    '#title' => t('Old password'),
-	    '#size' => 25,
-	    '#required' => TRUE
-  	);
-	// Password confirm field.
-	$form['account']['pass'] = array(
-	    '#type' => 'password_confirm',
-	    '#size' => 25,
-	    '#title' => t('New Password'),
-	    '#required' => TRUE
-  	);
-  	$form['submit'] = array(
-	    '#type' => 'submit',
-	    '#value' => t('Submit')
-  	);
-  	return $form;  
-}
+	global $user;
 
-function change_password_m_validate(&$form, &$form_state){
-	require_once DRUPAL_ROOT . '/' . variable_get('password_inc', 'includes/password.inc');
-	
-	// Make sure the provided current password is valid for this account.
-	if (!user_check_password($form_state['values']['current_pass'], $form['#account'])) {
-		form_set_error('current_pass', t('The current password you provided is incorrect.'));
-	}
-}
+    if (!user_is_logged_in()) {
+        drupal_access_denied();
+    }
 
-/**
- * Submit handler for change_password_m_form().
- */
-function change_password_m_submit(&$form, &$form_state) {
-	  // Set up the edit array to pass to user_save()
-	  $edit = array('pass' => $form_state['values']['pass']);
-	
-	  // Save the account with the new password.
-	  user_save($form['#account'], $edit);
-	
-	  // Inform the user.
-	  drupal_set_message(t('Your password has been changed.'));
+    module_load_include('inc', 'user', 'user.pages');
+    $form = drupal_get_form('user_profile_form', $user);
+    $request_new = l(t('Request new password'), 'user/password', array('attributes' => array('title' => t('Request new password via e-mail.'))));
+    $current_pass_description = t('Enter your current password to change the %pass. !request_new.', array('%pass' => t('Password'), '!request_new' => $request_new));
+    $form['account']['current_pass']['#description'] = $current_pass_description;
+    $form['account']['name']['#access'] = 0;
+    $form['account']['mail']['#access'] = 0;
+    $form['account']['status']['#access'] = 0;
+    $form['account']['roles']['#access'] = 0;
+    $form['field_nombre_s_']['#access'] = 0;
+    $form['field_lugar_de_trabajo']['#access'] = 0;
+    $form['field_user_ubicaci_n']['#access'] = 0;
+    $form['field_caracter_institucion']['#access'] = 0;
+    $form['field_zona_institucion']['#access'] = 0;
+    $form['field_has_participado']['#access'] = 0;
+    $form['field_terminos']['#access'] = 0;
+    $form['field_fecha_de_nacimiento']['#access'] = 0;
+    $form['picture']['#access'] = 0;
+    $form['timezone']['#access'] = 0;
+    $form['field_n_mero_identificaci_n']['#access'] = 0;
+    $form['field_tipo_identificaci_n']['#access'] = 0;
+    $form['field_apellidos']['#access'] = 0;
+    $form['field_tel_fono_contacto']['#access'] = 0;
+    $form['field_cargo']['#access'] = 0;
+    $form['field_ocupaci_n']['#access'] = 0;
+    return $form;
 }
 
 /**
@@ -63,117 +51,36 @@ function change_password_m_submit(&$form, &$form_state) {
 */
  
 function user_preferences($form, &$form_state){
-	// Provide a default date in the format YYYY-MM-DD HH:MM:SS.
-	if (user_is_anonymous()) {
-	    return drupal_access_denied(); // Or drupal_access_denied()?
-	  }
+global $user;
 
-	  
-	 
-  	 $form['date-birth'] = array(
-		'#type' => 'date_select',
-		'#title' => t('Date of birth'),
-		'#default_value' => date("Y-m-d", date()),
-		'#date_format' => "Y-m-d",
-		'#date_year_range' => '-0:+2',
-		'#states' => array(
-				'visible' => array(':input[name="set_dates"]' => array('value' => 1)),
-				)
+    if (!user_is_logged_in()) {
+        drupal_access_denied();
+    }
 
-);
-	$form['workplace'] = array(
-	    '#type' => 'textfield',
-	    '#size' => 25,
-	    '#title' => t('Workplace'),
-	    '#required' => TRUE
-  	);
-	$form['type-institution'] = array(
-	    '#type' => 'select',
-	    '#title' => t('Type institution'),
-		'#options' => array(
-			      0 => t('Prueba 1'),
-			      1 => t('Prueba 2'),
-    	),
-	    '#required' => TRUE
-  	);
-	$form['character-institution'] = array(
-	    '#type' => 'radios',
-	    '#size' => 25,
-	    '#title' => t('Character institution'),
-		'#options' => array(
-			      0 => t('Public'),
-			      1 => t('Private'),
-    	),
-	    '#required' => TRUE
-  	);
-	$form['zone-institution'] = array(
-	    '#type' => 'radios',
-	    '#title' => t('zone institution'),
-		'#options' => array(
-			      0 => t('Rural'),
-			      1 => t('Town'),
-    	),
-	    '#required' => TRUE
-  	);
-	$form['charge'] = array(
-	    '#type' => 'select',
-	    '#title' => t('Chargue'),
-		'#options' => array(
-			      0 => t('Prueba 1'),
-			      1 => t('Prueba 2'),
-    	),
-	    '#required' => TRUE
-  	);
-	$form['occupation'] = array(
-	    '#type' => 'select',
-	    '#title' => t('Occupation'),
-		'#options' => array(
-			      0 => t('Prueba 1'),
-			      1 => t('Prueba 2'),
-    	),
-	    '#required' => TRUE
-  	);
-	$form['events'] = array(
-	    '#type' => 'radios',
-	    '#title' => t('He has participated in some event of teaching:'),
-		'#options' => array(
-			      0 => t('Yes'),
-			      1 => t('No'),
-    	),
-	    '#required' => TRUE
-  	);		
-	
-  	$form['submit'] = array(
-	    '#type' => 'submit',
-	    '#value' => t('Submit')
-  	);
-  	return $form;  
+    module_load_include('inc', 'user', 'user.pages');
+    $form = drupal_get_form('user_profile_form', $user);
+    $form['account']['current_pass']['#access'] = 0;
+    $form['account']['name']['#access'] = 0;
+    $form['account']['mail']['#access'] = 0;
+    $form['account']['status']['#access'] = 0;
+    $form['account']['roles']['#access'] = 0;
+    $form['field_nombre_s_']['#access'] = 0;
+    $form['field_n_mero_identificaci_n']['#access'] = 0;
+    $form['field_user_ubicaci_n']['#access'] = 0;
+    $form['field_terminos']['#access'] = 0;
+    $form['picture']['#access'] = 0;
+    $form['timezone']['#access'] = 0;
+    $form['account']['pass']['#access'] = 0;
+    $form['field_n_mero_identificaci_n']['#access'] = 0;
+    $form['field_tipo_identificaci_n']['#access'] = 0;
+    $form['field_apellidos']['#access'] = 0;
+    $form['field_tel_fono_contacto']['#access'] = 0;
+    return $form;  
 }
 
 
 function user_preferences_submit($form, &$form_state) { 
-	global $user;
-	$value_table = array();
-	$value_table['uid']		 			= $user->uid;
-	$value_table['date_birth']	 		= $form_state['values']['date-birth'];
-	$value_table['workflow']	 		= $form_state['values']['workplace'];
-	$value_table['typeInstitution']		= $form_state['values']['type-institution'];
-	$value_table['characterInstitution']= $form_state['values']['character-institution'];
-	$value_table['zoneInstitution']		= $form_state['values']['zone-institution'];
-	$value_table['charge']				= $form_state['values']['charge'];
-	$value_table['ocupation']			= $form_state['values']['occupation'];
-	$value_table['events']				= $form_state['values']['events'];
 	
-	if($value_table['date_birth'] == "") {
-		$res = db_insert('user_magis',array('pid'))->fields($value_table)->execute();
-	} else {
-		$res = db_update('user_magis',array('pid'))->fields($value_table)->condition($user->uid, $value_table['uid'], '=')->execute();
-	}
-	if ($res==0 || $res== $value_table['uid'] ) {
-		drupal_set_message(t('The data have been properly stored. Thank you!' ));
-	} else {
-		drupal_set_message(t('The data is not stored properly.' ), 'error');
-	}
 }
 /**
  * Finally user preferences

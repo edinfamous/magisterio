@@ -536,3 +536,100 @@
 [25-Sep-2014 10:02:31] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55104957 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2168
 [25-Sep-2014 10:19:23] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55104957 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2168
 [15-Oct-2014 17:16:02] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55436657 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2168
+[23-Oct-2014 17:13:50] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55445513 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[23-Oct-2014 17:13:59] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55445513 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[23-Oct-2014 17:14:14] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55445513 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[25-Oct-2014 12:27:31] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:27:32] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:27:32] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:27:32] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:28:29] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:28:33] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:28:37] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:28:40] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:28:41] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:29:44] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:29:47] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:29:49] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:29:51] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:29:55] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:30:03] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:30:11] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:30:28] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:45:53] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 12:46:01] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 13:26:27] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 13:26:32] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 13:26:35] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:07:01] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:07:05] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:13:55] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:14:24] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:14:27] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:15:04] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 16:15:08] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_CONSTANT_ENCAPSED_STRING or '(' in /home3/magiste4/public_html/sites/all/modules/gmap/gmap.module on line 8
+[25-Oct-2014 17:08:19] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 80 bytes) in /home3/magiste4/public_html/sites/all/modules/entity/includes/entity.wrapper.inc on line 32
+[25-Oct-2014 17:08:39] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 84 bytes) in /home3/magiste4/public_html/sites/all/modules/search_api/includes/index_entity.inc on line 582
+[26-Oct-2014 11:42:17] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 79 bytes) in /home3/magiste4/public_html/sites/all/modules/entity/includes/entity.wrapper.inc on line 674
+[26-Oct-2014 11:42:37] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 90 bytes) in /home3/magiste4/public_html/includes/common.inc on line 7629
+[26-Oct-2014 12:10:47] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[26-Oct-2014 12:10:56] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[26-Oct-2014 12:11:13] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 16457326 bytes) in /home3/magiste4/public_html/includes/cache.inc on line 450
+[26-Oct-2014 12:11:44] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[26-Oct-2014 12:40:56] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[26-Oct-2014 12:50:32] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 16661048 bytes) in /home3/magiste4/public_html/includes/cache.inc on line 450
+[26-Oct-2014 12:50:41] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[26-Oct-2014 17:56:04] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682211 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[28-Oct-2014 15:54:42] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 82 bytes) in /home3/magiste4/public_html/sites/all/modules/entity/includes/entity.property.inc on line 89
+[28-Oct-2014 20:40:27] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home3/magiste4/public_html/sites/all/modules/views/plugins/views_plugin_argument_default_php.inc(53) : eval()'d code on line 22
+[29-Oct-2014 10:20:03] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 77 bytes) in /home3/magiste4/public_html/includes/database/select.inc on line 1293
+[29-Oct-2014 12:41:58] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55685207 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[29-Oct-2014 12:42:20] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55685207 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[29-Oct-2014 15:36:36] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 122880 bytes) in /home3/magiste4/public_html/sites/all/modules/ubercart/uc_order/uc_order.install on line 307
+[29-Oct-2014 17:16:33] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 80 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[29-Oct-2014 17:24:58] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 85 bytes) in /home3/magiste4/public_html/sites/all/modules/search_api/includes/index_entity.inc on line 582
+[02-Nov-2014 12:11:46] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:44:33] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:45:23] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:48:54] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:51:24] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:51:40] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 15404064 bytes) in /home3/magiste4/public_html/includes/cache.inc on line 450
+[02-Nov-2014 12:52:27] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:52:34] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:53:41] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 12:53:59] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 13:17:10] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 13:17:53] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[02-Nov-2014 13:18:11] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 55682639 bytes) in /home3/magiste4/public_html/includes/database/database.inc on line 2171
+[05-Nov-2014 09:57:41] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 09:57:41] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 09:57:41] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 09:57:41] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 09:59:50] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 82 bytes) in /home3/magiste4/public_html/sites/all/modules/token/token.module on line 957
+[05-Nov-2014 10:00:08] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 64 bytes) in /home3/magiste4/public_html/sites/all/modules/token/token.module on line 993
+[05-Nov-2014 10:00:12] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 81 bytes) in /home3/magiste4/public_html/sites/all/modules/token/token.module on line 990
+[05-Nov-2014 10:01:31] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 81 bytes) in /home3/magiste4/public_html/sites/all/modules/token/token.module on line 990
+[05-Nov-2014 10:05:42] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:05:43] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:05:43] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:05:43] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:10:48] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:10:48] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:10:48] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:10:49] PHP Parse error:  syntax error, unexpected T_STRING in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:19:45] PHP Parse error:  syntax error, unexpected '[' in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:19:45] PHP Parse error:  syntax error, unexpected '[' in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:19:46] PHP Parse error:  syntax error, unexpected '[' in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:21:45] PHP Parse error:  syntax error, unexpected '[' in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:21:45] PHP Parse error:  syntax error, unexpected '[' in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 10:21:45] PHP Parse error:  syntax error, unexpected '[' in /home3/magiste4/public_html/modules/php/php.module(80) : eval()'d code on line 1
+[05-Nov-2014 16:09:51] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:09:51] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:09:53] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:10:07] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:10:07] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:10:07] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:10:48] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:13:32] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:17:51] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
+[05-Nov-2014 16:38:50] PHP Fatal error:  Call to a member function execute_display() on a non-object in /home3/magiste4/public_html/sites/all/modules/ajax_facets/ajax_facets.pages.inc on line 35
